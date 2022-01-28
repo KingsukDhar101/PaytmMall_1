@@ -7,6 +7,7 @@ import Content from "./Components/Content/Content";
 import Footers from "./Components/Footer/Footers";
 import ContextWrapper from "./Context/ContextWrapper";
 
+// added by kingsuk dhar
 function App() {
   return (
     <ContextWrapper>
