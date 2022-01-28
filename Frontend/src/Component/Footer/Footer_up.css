@@ -14,11 +14,11 @@ span {
 
 .row{
   width: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .row .card-deck {
   margin-top: 2rem;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
     
 }
