@@ -21,7 +21,6 @@ export default function Topbar() {
 
   return (
     <>
-    <h2>hello</h2>
       <div className="topbar-container">
         <div className="header-logo">
           <img src={header_logo} alt="" />
