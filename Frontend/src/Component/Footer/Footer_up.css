@@ -1,0 +1,32 @@
+p {
+  justify-content: center;
+  font-size: small;
+  display: contents;
+}
+.Footer1 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+span {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.row{
+  width: 100%;
+  border: 1px solid black;
+}
+.row .card-deck {
+  margin-top: 2rem;
+  border: 1px solid black;
+  display: flex;
+    
+}
+.row .card-deck .card{
+  border: 1px solid black;
+  background-color: antiquewhite;
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+  padding: 0 20px;
+}

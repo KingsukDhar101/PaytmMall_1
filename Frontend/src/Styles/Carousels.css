@@ -1,0 +1,148 @@
+.content {
+  margin: 0 10px;
+}
+
+.pageimg {
+  width: 100%;
+  height: 85vh;
+  object-fit: cover;
+}
+
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+  background-color: rgba(204, 204, 204, 0.562);
+  font-size: 1em;
+  width: 2.4em;
+  height: 5em;
+  z-index: 1000;
+
+  /* box-shadow: 1px 2px 10px -1px rgb(0 0 0 / 30%); */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slick-arrow.slick-prev {
+  left: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.slick-arrow.slick-next {
+  right: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+.slick-arrow.slick-prev:hover,
+.slick-arrow.slick-next:hover {
+  background-color: rgba(204, 204, 204, 0.788);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.boximg {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px #ccc;
+}
+.boximg:hover {
+  transform: scale(1.1);
+  transition: 500ms;
+}
+
+.line1 {
+  font-size: 1em;
+  font-weight: bolder;
+  margin: 5px 0;
+}
+
+.line2 {
+  font-size: 0.8em;
+  color: green;
+  margin-bottom: 4px;
+}
+.line3 {
+  font-size: 0.8em;
+}
+
+.page-container {
+  height: 75vh;
+  /* border: 1px solid #ccc; */
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.left {
+  /* border: 1px solid black; */
+  height: 100%;
+  width: 65%;
+  position: absolute;
+  background-color: antiquewhite;
+  margin-right: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.left .left-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.right {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: 10px;
+  /* position: relative;
+  top: 0;
+  right: 0; */
+  background-color: white;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.right .right-top {
+  /* border: 1px solid black; */
+  height: 50%;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: orange;
+  border-radius: 15px;
+}
+.right .right-top .rightTop-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.right .right-bottom {
+  /* border: 1px solid black; */
+  height: 50%;
+  width: 100%;
+  background-color: tomato;
+  border-radius: 15px;
+}
+.right .right-bottom .rightBottom-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
