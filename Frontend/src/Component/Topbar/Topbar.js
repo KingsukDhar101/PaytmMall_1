@@ -26,21 +26,32 @@ export default function Topbar() {
           <img src={header_logo} alt="" />
         </div>
         <div className="header-container">
-          <div className="category-container">Shop by category</div>
+          <div className="category-container">
+            <i className="material-icons" style={{ color: "tomato" }}>
+              format_align_justify
+            </i>
+            <div className="category-text">Shop by category</div>
+          </div>
           <div className="searchbar-container">
             <input
               type="text"
               placeholder="Search for a Product, Brand or Category"
             />
-            <i class="fa fa-search"></i>
+            <i className="fa fa-search"></i>
           </div>
           <div className="order-container">
+            <i className="fas fa-clipboard" style={{ color: "tomato" }}></i>
             <div>My Orders</div>
           </div>
           <div className="cart-container">
+            <i className="fa fa-shopping-bag" style={{ color: "tomato" }}></i>
             <div>Cart</div>
           </div>
           <div className="auth-container" onClick={handleSignopen}>
+            <i
+              className="far fa-grin"
+              style={{ fontSize: "18px", color: "tomato" }}
+            ></i>
             <div>Log In/Sign Up</div>
           </div>
         </div>

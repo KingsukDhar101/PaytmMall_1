@@ -37,7 +37,7 @@ const carouselProperties = {
   nextArrow: <NextBtn />,
   slidesToShow: 10,
   slidesToScroll: 2,
-  infinite: true,
+  infinite: false,
   responsive: [
     {
       breakpoint: 321,
