@@ -1,23 +1,40 @@
 import React, { useContext } from "react";
 import SignAuthContext from "../../Context/SignAuthContext";
 import code_img from "../../Assets/Images/qr_code.png";
+import logoimg from "../../Assets/Images/paytmmall-logo.jpg"
 import "./Sign.css";
 export default function Sign() {
   const { setSignopen  } = useContext(SignAuthContext);
   return (
     <div className="sign-container-whole">
       <div className="sign-container">
-        <div className="cross" onClick={()=>{setSignopen(false)}}>X</div>
-        <div className="email-container">
-          <div className="input-text">Email : </div>
-          <input type="text" placeholder="Enter your email id" />
+        <div className="left-container">
+          <img src={code_img} alt="" />
+          <h6>Scan QR code with Paytm App to login</h6>
         </div>
-        <div className="password-container">
-          <div className="input-text">Password : </div>
-          <input type="password" placeholder="Enter your password" />
-        </div>
-        <div className="signin-btn">
-          <button>Signin</button>
+        <div className="right-container">
+          <div
+            className="cross"
+            onClick={() => {
+              setSignopen(false);
+            }}
+          >
+            X
+          </div>
+          <div className="logo-img">
+            <img src={logoimg} alt="" />
+          </div>
+          <div className="email-container">
+            <div className="input-text">Email : </div>
+            <input type="text" placeholder="Enter your email id" />
+          </div>
+          <div className="password-container">
+            <div className="input-text">Password : </div>
+            <input type="password" placeholder="Enter your password" />
+          </div>
+          <div className="signin-btn">
+            <button>Signin</button>
+          </div>
         </div>
       </div>
     </div>
