@@ -3,7 +3,7 @@
   height: 120px;
   text-align: center;
   /* border: 1px solid red; */
-  margin: 5px 0;
+  margin: 0 0 5px 0;
 }
 .header-logo {
   /* border: 1px solid black; */
@@ -12,12 +12,13 @@
   margin: 0 auto;
 }
 .header-logo img {
-  height: 120%;
-  width: 120%;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .topbar-container .header-container {
   /* border: 1px solid black; */
+  padding: 0 10px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -63,7 +64,7 @@
   /* border: 1px solid black; */
   width: 100%;
   height: 100%;
-  padding: 5px;
+  padding: 5px 10px;
   border: none;
 }
 .header-container .searchbar-container i {
@@ -72,13 +73,21 @@
   align-items: center;
   padding: 0 10px;
   /* border: 1px solid black; */
-  flex: 4;
+  font-size: 1.2em;
   color: tomato;
 }
-.searchbar-container input{
+.searchbar-container input {
   font-size: 0.9em;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 0;
+}
+
+input[type=text]:focus{
+  outline: none;
+}
+
+.category-container {
+  border: 1px solid #ccc;
 }
 
 .category-container,
@@ -93,13 +102,27 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-size: 0.9em;
+}
+.order-container,
+.cart-container,
+.auth-container{
+  border: none;
+}
+
+.order-container i,
+.cart-container i,
+.auth-container i {
+  margin-right: 8px;
 }
 
 .header-container .order-container {
 }
 .header-container .cart-container {
+  flex: 0.6;
 }
 .header-container .auth-container {
+  flex: 1.5;
 }
 
 .category-container:active,
@@ -107,4 +130,29 @@
 .cart-container:active,
 .auth-container:active {
   background-color: rgba(255, 99, 71, 0.527);
+}
+.auth-container{
+  position: relative;
+  background-color:rgba(99, 252, 107, 0.397);
+}
+.profile-container-atHover{
+  border: 1px solid #ccc;
+  width: 10em;
+  position: absolute;
+  top: 2.7em;
+  display: none;
+  /* box-shadow: 0 1px 1px 1px #ccc; */
+  z-index: 100;
+  background-color: white;
+}
+.auth-container:hover .profile-container-atHover{
+  display: block;
+}
+
+.profile-container-atHover div{
+  padding: 5px;
+
+}
+.profile-container-atHover div:hover{
+  background-color: rgba(212, 212, 212, 0.404);
 }

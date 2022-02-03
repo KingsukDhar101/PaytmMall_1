@@ -17,6 +17,10 @@ function App() {
           <Topbar />
           <Routes>
             <Route path="/" element={<Content />} />
+            <Route path="/order" element={<Order />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/Products" element={<Products />} />
+            <Route path="/Products/:id" element={<Product />} />
           </Routes>
           <Footer />
         </div>

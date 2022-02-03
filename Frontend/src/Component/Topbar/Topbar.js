@@ -6,18 +6,23 @@ import { Link } from "react-router-dom";
 // import SearchIcon from "@material-ui/icons/Search";
 // import Navbar from "react-bootstrap/Navbar";
 import SignAuthContext from "../../Context/SignAuthContext";
+import UserContext from "../../Context/UserContext";
 import header_logo from "../../Assets/Images/paytmmall-logo.jpg";
-import Sign from "../Sign/Sign";
+import Signin from "../Sign/Signin";
 import "./Topbar.css";
+import Signup from "../Sign/Signup";
 // import "../../Styles/Sign.css";
 
 export default function Topbar() {
-  const { signopen, setSignopen } = useContext(SignAuthContext);
+  const { signinopen, setSigninopen, signupopen, setSignupopen } =
+    useContext(SignAuthContext);
+  const { user, setUser } = useContext(UserContext);
 
-  function handleSignopen(e) {
+  function handleSigninopen(e) {
     e.preventDefault();
-    setSignopen(true);
+    setSigninopen(true);
   }
+
 
   return (
     <>
@@ -47,16 +52,34 @@ export default function Topbar() {
             <i className="fa fa-shopping-bag" style={{ color: "tomato" }}></i>
             <div>Cart</div>
           </div>
-          <div className="auth-container" onClick={handleSignopen}>
-            <i
-              className="far fa-grin"
-              style={{ fontSize: "18px", color: "tomato" }}
-            ></i>
-            <div>Log In/Sign Up</div>
-          </div>
+          {!user ? (
+            <div className="auth-container" onClick={handleSigninopen}>
+              <i
+                className="far fa-grin"
+                style={{ fontSize: "18px", color: "tomato" }}
+              ></i>
+              <div>Log In/Sign Up</div>
+            </div>
+          ) : (
+            <div className="auth-container">
+              <i
+                className="far fa-grin"
+                style={{ fontSize: "18px", color: "tomato" }}
+              ></i>
+              <div>{user}</div>
+              <div className="profile-container-atHover">
+                <div>View Profile</div>
+                <div>Your Whislist</div>
+                <div>Your Wallet</div>
+                <div>24x7 Help</div>
+                <div>Log Out</div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
-      {signopen && <Sign />}
+      {signinopen && <Signin />}
+      {signupopen && <Signup />}
     </>
   );
 }
